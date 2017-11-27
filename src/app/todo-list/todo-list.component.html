@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let todo of (toDoList |async).todos; let i = index">
+      <app-todo [todo]="todo"></app-todo> <span (click)="deleteTodo(i)">x</span>
+  </li>
+</ul>
